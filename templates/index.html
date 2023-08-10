@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div id="main">
+        <h2>Choose Rock, Paper or Scissors</h2>
+        <form id="select" action="/" method="POST" >
+            <input type="radio" name="option" value="rock">Rock
+            <input type="radio" name="option" value="paper">Paper
+            <input type="radio" name="option" value="scissors">Scissors
+            <button type="submit">Choose</button>
+        </form>
+        <div id="answer">
+            {% if fin: %}
+            <p> {{ fin }} </p>
+            {% endif %}
+            {% if a: %}
+            <p>The computer chose: {{ a }} </p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
